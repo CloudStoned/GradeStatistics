@@ -11,8 +11,7 @@ namespace AdvStatics
         static void Main(string[] args) 
         {
             List<StudentModel> studentsList = new List<StudentModel>();
-            {
-
+            
             StudentModel studentA = new StudentModel();
             studentA.studentName = "Student A";
             studentA.prelim = 78.88;
@@ -68,5 +67,5 @@ namespace AdvStatics
             //}
 
         }
-    }
+   }
 }
