@@ -1,0 +1,15 @@
+C:\Users\cloud\PROJECTS\AdvStatics\bin\Debug\net6.0\AdvStatics.exe
+C:\Users\cloud\PROJECTS\AdvStatics\bin\Debug\net6.0\AdvStatics.deps.json
+C:\Users\cloud\PROJECTS\AdvStatics\bin\Debug\net6.0\AdvStatics.runtimeconfig.json
+C:\Users\cloud\PROJECTS\AdvStatics\bin\Debug\net6.0\AdvStatics.dll
+C:\Users\cloud\PROJECTS\AdvStatics\bin\Debug\net6.0\AdvStatics.pdb
+C:\Users\cloud\PROJECTS\AdvStatics\obj\Debug\net6.0\AdvStatics.csproj.AssemblyReference.cache
+C:\Users\cloud\PROJECTS\AdvStatics\obj\Debug\net6.0\AdvStatics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cloud\PROJECTS\AdvStatics\obj\Debug\net6.0\AdvStatics.AssemblyInfoInputs.cache
+C:\Users\cloud\PROJECTS\AdvStatics\obj\Debug\net6.0\AdvStatics.AssemblyInfo.cs
+C:\Users\cloud\PROJECTS\AdvStatics\obj\Debug\net6.0\AdvStatics.csproj.CoreCompileInputs.cache
+C:\Users\cloud\PROJECTS\AdvStatics\obj\Debug\net6.0\AdvStatics.dll
+C:\Users\cloud\PROJECTS\AdvStatics\obj\Debug\net6.0\refint\AdvStatics.dll
+C:\Users\cloud\PROJECTS\AdvStatics\obj\Debug\net6.0\AdvStatics.pdb
+C:\Users\cloud\PROJECTS\AdvStatics\obj\Debug\net6.0\AdvStatics.genruntimeconfig.cache
+C:\Users\cloud\PROJECTS\AdvStatics\obj\Debug\net6.0\ref\AdvStatics.dll

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "JBoY3mlaL0f6I40IXqgUdarb9QUklV97Awx0GcIq5nqRAFqoOByEn8CBiLeHOBaEJSwjx2+LlvR+dBhu0S17Yg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cloud\\PROJECTS\\AdvStatics\\AdvStatics.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cloud\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.22\\microsoft.windowsdesktop.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\cloud\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.22\\microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\cloud\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.22\\microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\cloud\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.22\\microsoft.netcore.app.host.win-x64.6.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}
