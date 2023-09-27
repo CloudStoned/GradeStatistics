@@ -8,7 +8,7 @@ namespace AdvStatics
 {
     public class GetMean
     {
-        private static double CalculatMean(List<StudentModel> studentList)
+        private static double CalculateMean(List<StudentModel> studentList)
         {
             double sum = 0;
             int counter = 0;
@@ -16,6 +16,7 @@ namespace AdvStatics
 
             foreach (var student in studentList)
             {
+                //Console.WriteLine(student.prelim);
                 sum += student.prelim;
                 counter++;
             }
@@ -28,14 +29,13 @@ namespace AdvStatics
         public static void DisplayPrelimMean(List<StudentModel> studentList)
         {
             Console.Write("Prelim Mean");
-            double prelimMean = CalculatMean(studentList);
-            Console.Write($"Prelim Mean: {prelimMean:2F}");
+            double prelimMean = CalculateMean(studentList);
+            Console.Write($"Prelim Mean: {prelimMean:F2}");
         }
 
         public static void DisplayMidtermMean(List<StudentModel> studentList)
         {
-            double midtermMean = CalculatMean(studentList);
-            Console.Write($"Midterm Mean: {midtermMean:2F}");
+
         }
     }
 }
