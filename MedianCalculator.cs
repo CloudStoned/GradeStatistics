@@ -8,35 +8,69 @@ namespace AdvStatics
 {
     public class MedianCalculator
     {
-        private static (List<StudentModel>, int countData) SortStudentList(List<StudentModel> students)
+        private static List<StudentModel>SortStudentList(List<StudentModel> students)
         {
-            int count = 0;
             var sortedStudentList = students.OrderBy(student => student.prelim).ToList();
-            count = sortedStudentList.Count;
-
-            return (sortedStudentList, count);
+            return sortedStudentList;
         }
 
-        private static List<StudentModel> CalculateMedian(List<StudentModel> studentList, Func<StudentModel, double> termSelector)
+        //private static List<StudentModel> CalculateMedian(List<StudentModel> studentList, Func<StudentModel, double> termSelector)
+        //{
+        //    var sortedStudentList = SortStudentList(studentList); 
+        //    int count = sortedStudentList.Count;
+
+        //    if (count % 3 == 0) 
+        //    {
+
+        //    }
+
+        //    return sortedStudentList;
+        //}
+
+        public static void CalculateMedian(List<StudentModel> studentList)
         {
-            var sortedList = SortStudentList(studentList).Item1; // Extract the sorted list from the tuple
+            var sortedStudentList = SortStudentList(studentList); 
+            int count = sortedStudentList.Count;
 
-            // Implement median calculation logic here if needed
-
-            return sortedList;
-        }
-
-        public static void DisplayPrelimMedian(List<StudentModel> students)
-        {
-            var sortedList = CalculateMedian(students, student => student.prelim);
-
-            Console.WriteLine("Sorted List:");
-            foreach (var student in sortedList)
+            if (count % 2 == 0) // Even-sized dataset
             {
-                Console.WriteLine(student.prelim);
+                Console.WriteLine("Even Number");
+                Console.WriteLine(count);
+
+                // Calculate the median for even-sized dataset
+                double median = (sortedStudentList[count / 2 - 1].prelim + sortedStudentList[count / 2].prelim) / 2.0;
+
+                Console.WriteLine("Median:");
+                Console.WriteLine(median);
             }
 
-            Console.WriteLine($"{students.Count} Data");
+            else // Odd-sized dataset
+            {
+                Console.WriteLine("Odd Number");
+                Console.WriteLine(count);
+
+                // Calculate the median for odd-sized dataset
+                double median = sortedStudentList[count / 2].prelim;
+
+                Console.WriteLine("Median:");
+                Console.WriteLine(median);
+            }
+
+
+            //return sortedStudentList;
         }
+
+        //public static void DisplayPrelimMedian(List<StudentModel> students)
+        //{
+        //    var sortedList = CalculateMedian(students, student => student.prelim);
+
+        //    Console.WriteLine("Sorted List:");
+        //    foreach (var student in sortedList)
+        //    {
+        //        Console.WriteLine(student.prelim);
+        //    }
+
+        //    Console.WriteLine($"{students.Count} Data");
+        //}
     }
 }
