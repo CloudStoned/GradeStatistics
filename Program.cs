@@ -11,7 +11,7 @@ namespace AdvStatics
         static void Main(string[] args) 
         {
             List<StudentModel> studentsList = new List<StudentModel>();
-<<<<<<< HEAD
+
             
             StudentModel studentA = new StudentModel();
             studentA.studentName = "Student A";
@@ -55,31 +55,14 @@ namespace AdvStatics
             studentF.midterm = 90.11;
             studentF.finals = 89.90;
             studentsList.Add(studentF);
-=======
-            {
-                new StudentModel()
-                {
-                    studentName = "Student A",
-                    prelim = 78.88,
-                    midterm = 85.00,
-                    finals = 100.00
-                };
-
-                new StudentModel()
-                {
-                    studentName = "Student B",
-                    prelim = 56.76,
-                    midterm = 98.00,
-                    finals = 100.00
-                };
->>>>>>> 96c9322d0a70de46efacbd0437ffe893f3624d4a
-
-             
-            }
 
 
 
-            GetMean.DisplayPrelimMean(studentsList);
+
+            StatsCalculator.DisplayPrelimMean(studentsList);
+            StatsCalculator.DisplayMidtermMean(studentsList);
+            StatsCalculator.DisplayFinalsMean(studentsList);  
+
 
 
             //foreach (var stud in studentsList)
@@ -88,5 +71,5 @@ namespace AdvStatics
             //}
 
         }
-   }
+    }
 }
