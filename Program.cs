@@ -63,8 +63,10 @@ namespace AdvStatics
             //MeanCalculator.DisplayMidtermMean(studentsList);
             //MeanCalculator.DisplayFinalsMean(studentsList);  
 
-            MedianCalculator.DisplayPrelimMedian(studentsList);
 
+            MedianCalculator.DisplayPrelimMedian(studentsList);
+            MedianCalculator.DisplayMidtermMedian(studentsList);
+            MedianCalculator.DisplayFinalsMedian(studentsList);
 
             //foreach (var stud in studentsList)
             //{
