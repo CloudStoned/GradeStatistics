@@ -8,63 +8,33 @@ namespace AdvStatics
 {
     public  class GradeCalculator
     {
+        
+        private static double CalculateFinalPeriod (double prelim, double midterm, double finals)
+        {
+            double roundedUpFinalGrade = prelim + midterm + finals;
+
+            return Math.Ceiling(roundedUpFinalGrade / 3);
+        }
+        
+
         public static void DisplayGrade(List<StudentModel> studentList)
         {
             foreach (StudentModel student in studentList)
             {
-                switch (student.studentName)
-                {
-                    case "Student A":
-                        Console.WriteLine("Student A");
-                        Console.WriteLine($"Prelim : {Math.Floor(student.prelim)}");
-                        Console.WriteLine($"Midterm: {Math.Floor(student.midterm)}");
-                        Console.WriteLine($"Finals : {Math.Floor(student.finals)}");
-                        break;
+                
+                double roundDownPrelim = Math.Floor(student.prelim);
+                double roundDownMidterm = Math.Floor(student.midterm);
+                double roundDownFinals = Math.Floor(student.finals);
+                double roundedUpFinalGrade = CalculateFinalPeriod(roundDownPrelim, roundDownMidterm, roundDownFinals);
+                
+                Console.WriteLine(student.studentName);
+                Console.WriteLine($"Prelim : {roundDownPrelim}");
+                Console.WriteLine($"Midterm: {roundDownMidterm}");
+                Console.WriteLine($"Finals : {roundDownFinals}");
+                Console.WriteLine($"Final Average : {roundedUpFinalGrade}");
 
-                    case "Student B":
-                        Console.WriteLine();
-                        Console.WriteLine("Student B");
-                        Console.WriteLine($"Prelim : {Math.Floor(student.prelim)}");
-                        Console.WriteLine($"Midterm: {Math.Floor(student.midterm)}");
-                        Console.WriteLine($"Finals : {Math.Floor(student.finals)}");
-                        break;
 
-                    case "Student C":
-                        Console.WriteLine();
-                        Console.WriteLine("Student C");
-                        Console.WriteLine($"Prelim : {Math.Floor(student.prelim)}");
-                        Console.WriteLine($"Midterm: {Math.Floor(student.midterm)}");
-                        Console.WriteLine($"Finals : {Math.Floor(student.finals)}");
-                        break;
-
-                    case "Student D":
-                        Console.WriteLine();
-                        Console.WriteLine("Student D");
-                        Console.WriteLine($"Prelim : {Math.Floor(student.prelim)}");
-                        Console.WriteLine($"Midterm: {Math.Floor(student.midterm)}");
-                        Console.WriteLine($"Finals : {Math.Floor(student.finals)}");
-                        break;
-
-                    case "Student E":
-                        Console.WriteLine();
-                        Console.WriteLine("Student E");
-                        Console.WriteLine($"Prelim : {Math.Floor(student.prelim)}");
-                        Console.WriteLine($"Midterm: {Math.Floor(student.midterm)}");
-                        Console.WriteLine($"Finals : {Math.Floor(student.finals)}");
-                        break;
-
-                    case "Student F":
-                        Console.WriteLine();
-                        Console.WriteLine("Student F");
-                        Console.WriteLine($"Prelim : {Math.Floor(student.prelim)}");
-                        Console.WriteLine($"Midterm: {Math.Floor(student.midterm)}");
-                        Console.WriteLine($"Finals : {Math.Floor(student.finals)}");
-                        break;
-
-                    default:
-                        Console.WriteLine("Unknown student");
-                        break;
-                }
+                Console.WriteLine(); 
             }
         }
     }
