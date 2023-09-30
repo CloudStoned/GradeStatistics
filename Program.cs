@@ -58,20 +58,20 @@ namespace AdvStatics
 
 
 
+            /*
+            MeanCalculator.DisplayPrelimMean(studentsList);
+            MeanCalculator.DisplayMidtermMean(studentsList);
+            MeanCalculator.DisplayFinalsMean(studentsList);
 
-            //MeanCalculator.DisplayPrelimMean(studentsList);
-            //MeanCalculator.DisplayMidtermMean(studentsList);
-            //MeanCalculator.DisplayFinalsMean(studentsList);  
-
+            Console.WriteLine();
 
             MedianCalculator.DisplayPrelimMedian(studentsList);
             MedianCalculator.DisplayMidtermMedian(studentsList);
             MedianCalculator.DisplayFinalsMedian(studentsList);
+            */
 
-            //foreach (var stud in studentsList)
-            //{
-            //    Console.WriteLine($"{stud.studentName}: Prelim = {stud.prelim},    Midterm = {stud.midterm}, Finals = {stud.finals}");
-            //}
+            GradeCalculator.DisplayGrade(studentsList);
+
 
         }
     }
