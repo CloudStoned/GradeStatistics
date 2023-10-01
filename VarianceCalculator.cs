@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
@@ -9,22 +10,21 @@ namespace AdvStatics
 {
     public class VarianceCalculator: MeanCalculator
     {
-        private static double CalculateVariance(List<StudentModel> studentList, Func<StudentModel, double> termSelector)
+        public static double CalculateVariance(List<StudentModel> studentList, Func<StudentModel, double> termSelector)
         {
             double mean = CalculateMean(studentList, termSelector);
-            double summationOfPower = 0;
-            int counter = studentList.Count;
+            int counter = studentList.Count; 
+            double summationOfSquared = 0;
 
             foreach (StudentModel student in studentList) 
             {
                 double value = termSelector(student);
-                Console.WriteLine(value);
-                Console.WriteLine(mean);
                 double differenceOfValue = value - mean;
-                summationOfPower = Math.Pow(2.0, differenceOfValue);
+                double differenceSquared = differenceOfValue * differenceOfValue;
+                summationOfSquared = summationOfSquared + differenceSquared;
+                
             }
-
-            double variance = summationOfPower / (mean - counter);
+            double variance =  summationOfSquared / (counter - 1);
 
             return variance;
         }
@@ -32,8 +32,22 @@ namespace AdvStatics
         public static void DisplayPrelimVariance(List<StudentModel> studentList) 
         {
             double prelimVariance = CalculateVariance(studentList, student => student.prelim);
-            Console.WriteLine($"Prelim Variance: {prelimVariance}");
+            Console.WriteLine($"Prelim Variance: {prelimVariance:F3}");
         }
+
+        public static void DisplayMidtermVariance(List<StudentModel> studentList)
+        {
+            double midtermVariance = CalculateVariance(studentList, student => student.midterm);
+            Console.WriteLine($"Midterm Variance: {midtermVariance:F3}");
+        }
+
+        public static void DisplayFinalsVariance(List<StudentModel> studentList)
+        {
+            double finalsVariance = CalculateVariance(studentList, student => student.finals);
+            Console.WriteLine($"Midterm Variance: {finalsVariance:F3}");
+        }
+
+
 
     }
 }
