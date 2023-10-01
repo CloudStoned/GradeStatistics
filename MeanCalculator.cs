@@ -8,8 +8,9 @@ namespace AdvStatics
 {
     public class MeanCalculator
     {
-        private static double CalculateMean(List<StudentModel> studentList, Func<StudentModel, double> termSelector)
+        public static double CalculateMean(List<StudentModel> studentList, Func<StudentModel, double> termSelector)
         {
+            
             double sum = 0;
             int counter = 0;
             double mean;
@@ -29,21 +30,21 @@ namespace AdvStatics
         public static void DisplayPrelimMean(List<StudentModel> studentList)
         {
             double prelimMean = CalculateMean(studentList, student => student.prelim);
-            Console.Write($"Prelim Mean: {prelimMean:F2}");
+            Console.WriteLine($"Prelim Mean: {prelimMean:F2}");
         }
 
         public static void DisplayMidtermMean(List<StudentModel> studentList)
         {
-            Console.WriteLine();
+            
             double midtermMean = CalculateMean(studentList, student => student.midterm);
-            Console.Write($"Midterm Mean: {midtermMean:F2}");
+            Console.WriteLine($"Midterm Mean: {midtermMean:F2}");
         }
 
         public static void DisplayFinalsMean(List<StudentModel> studentList)
         {
-            Console.WriteLine();
+          
             double finalsMean = CalculateMean(studentList, student => student.finals);
-            Console.Write($"Finals Mean: {finalsMean:F2}");
+            Console.WriteLine($"Finals Mean: {finalsMean:F2}");
         }
     }
 }

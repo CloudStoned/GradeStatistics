@@ -12,7 +12,6 @@ namespace AdvStatics
         {
             List<StudentModel> studentsList = new List<StudentModel>();
 
-            
             StudentModel studentA = new StudentModel();
             studentA.studentName = "Student A";
             studentA.prelim = 78.88;
@@ -27,7 +26,6 @@ namespace AdvStatics
             studentB.finals = 100.00;
             studentsList.Add(studentB);
 
-            
             StudentModel studentC = new StudentModel();
             studentC.studentName = "Student C";
             studentC.prelim = 98.00;
@@ -56,8 +54,6 @@ namespace AdvStatics
             studentF.finals = 89.90;
             studentsList.Add(studentF);
 
-
-
             /*
             MeanCalculator.DisplayPrelimMean(studentsList);
             MeanCalculator.DisplayMidtermMean(studentsList);
@@ -68,9 +64,34 @@ namespace AdvStatics
             MedianCalculator.DisplayPrelimMedian(studentsList);
             MedianCalculator.DisplayMidtermMedian(studentsList);
             MedianCalculator.DisplayFinalsMedian(studentsList);
-            */
 
             GradeCalculator.DisplayGrade(studentsList);
+
+            RangeCalculator.DisplayPrelimRange(studentsList);
+            RangeCalculator.DisplayMidtermRange(studentsList);
+            RangeCalculator.DisplayFinalsRange(studentsList);
+
+            ModeCalculator.DisplayPrelimMode(studentsList);
+            ModeCalculator.DisplayMidtermMode(studentsList);
+            ModeCalculator.DisplayFinalsMode(studentsList);
+            
+            VarianceCalculator.DisplayPrelimVariance(studentsList);
+            VarianceCalculator.DisplayMidtermVariance(studentsList);
+            VarianceCalculator.DisplayFinalsVariance(studentsList);
+
+            */
+
+            StandarDeviationCalculator.DisplayPrelimStandardDeviation(studentsList);
+            StandarDeviationCalculator.DisplayMidtermStandardDeviation(studentsList);
+            StandarDeviationCalculator.DisplayFinalsStandardDeviation(studentsList);
+
+
+
+
+
+
+
+
 
 
         }

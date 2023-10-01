@@ -13,9 +13,4 @@ namespace AdvStatics
         public double midterm { get; set; }
         public double finals { get; set; }
     }
-
-
-
-
-
 }
