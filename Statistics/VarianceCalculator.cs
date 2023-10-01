@@ -1,35 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace AdvStatics
+namespace AdvStatics.Statistics
 {
-    public class VarianceCalculator: MeanCalculator
+    public class VarianceCalculator : MeanCalculator
     {
         public static double CalculateVariance(List<StudentModel> studentList, Func<StudentModel, double> termSelector)
         {
             double mean = CalculateMean(studentList, termSelector);
-            int counter = studentList.Count; 
+            int counter = studentList.Count;
             double summationOfSquared = 0;
 
-            foreach (StudentModel student in studentList) 
+            foreach (StudentModel student in studentList)
             {
                 double value = termSelector(student);
                 double differenceOfValue = value - mean;
                 double differenceSquared = differenceOfValue * differenceOfValue;
                 summationOfSquared = summationOfSquared + differenceSquared;
-                
+
             }
-            double variance =  summationOfSquared / (counter - 1);
+            double variance = summationOfSquared / (counter - 1);
 
             return variance;
         }
 
-        public static void DisplayPrelimVariance(List<StudentModel> studentList) 
+        public static void DisplayPrelimVariance(List<StudentModel> studentList)
         {
             double prelimVariance = CalculateVariance(studentList, student => student.prelim);
             Console.WriteLine($"Prelim Variance: {prelimVariance:F3}");

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace AdvStatics
+namespace AdvStatics.Statistics
 {
-    public class StandarDeviationCalculator: VarianceCalculator
+    public class StandarDeviationCalculator : VarianceCalculator
     {
         private static double CalculateStandardDeviation(List<StudentModel> studentList, Func<StudentModel, double> termSelector)
         {

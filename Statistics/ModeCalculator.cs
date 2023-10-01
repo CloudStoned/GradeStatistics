@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.Diagnostics.Tracing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace AdvStatics
+namespace AdvStatics.Statistics
 {
     public class ModeCalculator
     {
-        private static double HasMode(List<StudentModel> studentList,Func<StudentModel, double> termSelector)
+        private static double HasMode(List<StudentModel> studentList, Func<StudentModel, double> termSelector)
         {
             double currentValue = termSelector(studentList[0]);
             int consecutiveCount = 1;
@@ -41,7 +33,7 @@ namespace AdvStatics
             return 0;
         }
 
-        public static void DisplayPrelimMode(List<StudentModel> studentList) 
+        public static void DisplayPrelimMode(List<StudentModel> studentList)
         {
             double prelimMode = HasMode(studentList, student => student.prelim);
             Console.WriteLine($"Prelim Mode : {prelimMode}");

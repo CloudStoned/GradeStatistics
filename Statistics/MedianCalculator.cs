@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace AdvStatics
+namespace AdvStatics.Statistics
 {
     public class MedianCalculator
     {
-        private static List<StudentModel>SortStudentList(List<StudentModel> students, Func<StudentModel, double> termSelector)
+        private static List<StudentModel> SortStudentList(List<StudentModel> students, Func<StudentModel, double> termSelector)
         {
             var sortedStudentList = students.OrderBy(termSelector).ToList();
             return sortedStudentList;
@@ -26,15 +22,13 @@ namespace AdvStatics
                 double value2 = termSelector(sortedStudentList[count / 2]);
                 median = (value1 + value2) / 2.0;
 
-            } 
+            }
 
             else
             {
                 median = termSelector(sortedStudentList[count / 2]);
             }
 
- 
-            
             return median;
         }
 

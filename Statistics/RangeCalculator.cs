@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdvStatics
+namespace AdvStatics.Statistics
 {
     public class RangeCalculator
     {
@@ -15,10 +15,10 @@ namespace AdvStatics
             double min = students.Min(termSelector);
 
             return max - min;
-            
+
         }
 
-        public static void DisplayPrelimRange(List<StudentModel> students) 
+        public static void DisplayPrelimRange(List<StudentModel> students)
         {
             double prelimRange = CalculateRange(students, student => student.prelim);
             Console.WriteLine($"Prelim Median: {prelimRange:F2}");

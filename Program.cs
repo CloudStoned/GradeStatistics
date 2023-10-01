@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AdvStatics.Statistics;
+using AdvStatics.Design;
 
 namespace AdvStatics
 {
-   public class Program
+    public class Program
     {
         static void Main(string[] args) 
         {
@@ -54,46 +51,88 @@ namespace AdvStatics
             studentF.finals = 89.90;
             studentsList.Add(studentF);
 
-            /*
-            MeanCalculator.DisplayPrelimMean(studentsList);
-            MeanCalculator.DisplayMidtermMean(studentsList);
-            MeanCalculator.DisplayFinalsMean(studentsList);
+            bool shouldExit = false;
 
-            Console.WriteLine();
+            while (!shouldExit)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Enter Number");
+                Console.WriteLine("1 - Mean");
+                Console.WriteLine("2 - Median");
+                Console.WriteLine("3 - Mode");
+                Console.WriteLine("4 - Variance");
+                Console.WriteLine("5 - Standard Deviation");
+                Console.WriteLine("6 - Range");
+                Console.WriteLine("7 - Student Grades");
+                Console.WriteLine("8 - Exit");
 
-            MedianCalculator.DisplayPrelimMedian(studentsList);
-            MedianCalculator.DisplayMidtermMedian(studentsList);
-            MedianCalculator.DisplayFinalsMedian(studentsList);
+                int choose = int.Parse(Console.ReadLine());
 
-            GradeCalculator.DisplayGrade(studentsList);
+                switch (choose)
+                {
+                    case 1:
+                        Console.Clear();
+                        DataTableDesign.DisplayData(studentsList);
+                        MeanCalculator.DisplayPrelimMean(studentsList);
+                        MeanCalculator.DisplayMidtermMean(studentsList);
+                        MeanCalculator.DisplayFinalsMean(studentsList);
+                        break;
 
-            RangeCalculator.DisplayPrelimRange(studentsList);
-            RangeCalculator.DisplayMidtermRange(studentsList);
-            RangeCalculator.DisplayFinalsRange(studentsList);
+                    case 2:
+                        Console.Clear();
+                        DataTableDesign.DisplayData(studentsList);
+                        MedianCalculator.DisplayPrelimMedian(studentsList);
+                        MedianCalculator.DisplayMidtermMedian(studentsList);
+                        MedianCalculator.DisplayFinalsMedian(studentsList);
+                        break;
 
-            ModeCalculator.DisplayPrelimMode(studentsList);
-            ModeCalculator.DisplayMidtermMode(studentsList);
-            ModeCalculator.DisplayFinalsMode(studentsList);
-            
-            VarianceCalculator.DisplayPrelimVariance(studentsList);
-            VarianceCalculator.DisplayMidtermVariance(studentsList);
-            VarianceCalculator.DisplayFinalsVariance(studentsList);
+                    case 3:
+                        Console.Clear();
+                        DataTableDesign.DisplayData(studentsList);
+                        ModeCalculator.DisplayPrelimMode(studentsList);
+                        ModeCalculator.DisplayMidtermMode(studentsList);
+                        ModeCalculator.DisplayFinalsMode(studentsList);
+                        break;
 
-            */
+                    case 4:
+                        Console.Clear();
+                        DataTableDesign.DisplayData(studentsList);
+                        VarianceCalculator.DisplayPrelimVariance(studentsList);
+                        VarianceCalculator.DisplayMidtermVariance(studentsList);
+                        VarianceCalculator.DisplayFinalsVariance(studentsList);
+                        break;
 
-            StandarDeviationCalculator.DisplayPrelimStandardDeviation(studentsList);
-            StandarDeviationCalculator.DisplayMidtermStandardDeviation(studentsList);
-            StandarDeviationCalculator.DisplayFinalsStandardDeviation(studentsList);
+                    case 5:
+                        Console.Clear();
+                        DataTableDesign.DisplayData(studentsList);
+                        StandarDeviationCalculator.DisplayPrelimStandardDeviation(studentsList);
+                        StandarDeviationCalculator.DisplayMidtermStandardDeviation(studentsList);
+                        StandarDeviationCalculator.DisplayFinalsStandardDeviation(studentsList);
+                        break;
 
+                    case 6:
+                        Console.Clear();
+                        DataTableDesign.DisplayData(studentsList);
+                        RangeCalculator.DisplayPrelimRange(studentsList);
+                        RangeCalculator.DisplayMidtermRange(studentsList);
+                        RangeCalculator.DisplayFinalsRange(studentsList);
+                        break;
 
+                    case 7:
+                        Console.Clear();
+                        GradeCalculator.DisplayGrade(studentsList);
+                        break;
 
+                    case 8:
+                        shouldExit = true;  
+                        break;
 
+                    default:
+                        Console.WriteLine("Invalid option");
+                        break;
 
-
-
-
-
-
+                }
+            }
         }
     }
 }
