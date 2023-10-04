@@ -84,5 +84,69 @@ namespace StatsWinApp
             label7.Text = $"Finals Mode: {finals:F3}";
             label7.Visible = true;
         }
+
+        private void CalculateRange_BTN_Click(object sender, EventArgs e)
+        {
+            double prelim = RangeCalculator.CalculateRange(StudentModel.studentsList, stud => stud.prelim);
+            double midterm = RangeCalculator.CalculateRange(StudentModel.studentsList, stud => stud.midterm);
+            double finals = RangeCalculator.CalculateRange(StudentModel.studentsList, stud => stud.finals);
+
+
+            label12.Text = $"Prelim Range: {prelim:F3}";
+            label12.Visible = true;
+
+
+            label11.Text = $"Midterm Range: {midterm:F3}";
+            label11.Visible = true;
+
+
+            label10.Text = $"Finals Range: {finals:F3}";
+            label10.Visible = true;
+        }
+
+        private void StandardDeviation_BTN_Click(object sender, EventArgs e)
+        {
+            double prelim = StandarDeviationCalculator.CalculateStandardDeviation(StudentModel.studentsList, stud => stud.prelim);
+            double midterm = StandarDeviationCalculator.CalculateStandardDeviation(StudentModel.studentsList, stud => stud.midterm);
+            double finals = StandarDeviationCalculator.CalculateStandardDeviation(StudentModel.studentsList, stud => stud.finals);
+
+
+            label15.Text = $"Prelim Standard D.: {prelim:F3}";
+            label15.Visible = true;
+
+
+            label14.Text = $"Midterm Standard D.: {midterm:F3}";
+            label14.Visible = true;
+
+
+            label13.Text = $"Finals Standard D.: {finals:F3}";
+            label13.Visible = true;
+        }
+
+        private void VarianceCalculator_BTN_Click(object sender, EventArgs e)
+        {
+            double prelim = StandarDeviationCalculator.CalculateStandardDeviation(StudentModel.studentsList, stud => stud.prelim);
+            double midterm = StandarDeviationCalculator.CalculateStandardDeviation(StudentModel.studentsList, stud => stud.midterm);
+            double finals = StandarDeviationCalculator.CalculateStandardDeviation(StudentModel.studentsList, stud => stud.finals);
+
+
+            label18.Text = $"Prelim Variance: {prelim:F3}";
+            label18.Visible = true;
+
+
+            label17.Text = $"Midterm Variance: {midterm:F3}";
+            label17.Visible = true;
+
+
+            label16.Text = $"Finals Variance: {finals:F3}";
+            label16.Visible = true;
+        }
+
+        private void GradeCalculator_BTN_Click(object sender, EventArgs e)
+        {
+            double prelim = GradeCalculator.CalculateFinalPeriod(StudentModel.studentsList, stud => stud.prelim);
+
+
+        }
     }
 }

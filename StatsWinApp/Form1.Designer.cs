@@ -45,12 +45,24 @@
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
+            CalculateRange_BTN = new Button();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            StandardDeviation_BTN = new Button();
+            label13 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            VarianceCalculator_BTN = new Button();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(332, 49);
+            label1.Location = new Point(335, 49);
             label1.Name = "label1";
             label1.Size = new Size(38, 15);
             label1.TabIndex = 0;
@@ -58,7 +70,7 @@
             // 
             // CalculateMean_BTN
             // 
-            CalculateMean_BTN.Location = new Point(332, 12);
+            CalculateMean_BTN.Location = new Point(335, 12);
             CalculateMean_BTN.Name = "CalculateMean_BTN";
             CalculateMean_BTN.Size = new Size(123, 23);
             CalculateMean_BTN.TabIndex = 1;
@@ -96,7 +108,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(332, 77);
+            label2.Location = new Point(335, 77);
             label2.Name = "label2";
             label2.Size = new Size(38, 15);
             label2.TabIndex = 3;
@@ -105,7 +117,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(332, 106);
+            label3.Location = new Point(335, 106);
             label3.Name = "label3";
             label3.Size = new Size(38, 15);
             label3.TabIndex = 4;
@@ -113,7 +125,7 @@
             // 
             // CalculateMedian_BTN
             // 
-            CalculateMedian_BTN.Location = new Point(461, 12);
+            CalculateMedian_BTN.Location = new Point(503, 12);
             CalculateMedian_BTN.Name = "CalculateMedian_BTN";
             CalculateMedian_BTN.Size = new Size(123, 23);
             CalculateMedian_BTN.TabIndex = 5;
@@ -124,7 +136,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(471, 106);
+            label4.Location = new Point(513, 106);
             label4.Name = "label4";
             label4.Size = new Size(38, 15);
             label4.TabIndex = 8;
@@ -133,7 +145,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(471, 77);
+            label5.Location = new Point(513, 77);
             label5.Name = "label5";
             label5.Size = new Size(38, 15);
             label5.TabIndex = 7;
@@ -142,7 +154,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(471, 49);
+            label6.Location = new Point(513, 49);
             label6.Name = "label6";
             label6.Size = new Size(38, 15);
             label6.TabIndex = 6;
@@ -150,7 +162,7 @@
             // 
             // CalculateMode_BTN
             // 
-            CalculateMode_BTN.Location = new Point(590, 12);
+            CalculateMode_BTN.Location = new Point(666, 12);
             CalculateMode_BTN.Name = "CalculateMode_BTN";
             CalculateMode_BTN.Size = new Size(123, 23);
             CalculateMode_BTN.TabIndex = 9;
@@ -161,7 +173,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(590, 106);
+            label7.Location = new Point(678, 106);
             label7.Name = "label7";
             label7.Size = new Size(38, 15);
             label7.TabIndex = 12;
@@ -170,7 +182,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(590, 77);
+            label8.Location = new Point(678, 77);
             label8.Name = "label8";
             label8.Size = new Size(38, 15);
             label8.TabIndex = 11;
@@ -179,17 +191,140 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(590, 49);
+            label9.Location = new Point(678, 49);
             label9.Name = "label9";
             label9.Size = new Size(38, 15);
             label9.TabIndex = 10;
             label9.Text = "label9";
             // 
+            // CalculateRange_BTN
+            // 
+            CalculateRange_BTN.Location = new Point(335, 158);
+            CalculateRange_BTN.Name = "CalculateRange_BTN";
+            CalculateRange_BTN.Size = new Size(123, 23);
+            CalculateRange_BTN.TabIndex = 13;
+            CalculateRange_BTN.Text = "Calculate Range";
+            CalculateRange_BTN.UseVisualStyleBackColor = true;
+            CalculateRange_BTN.Click += CalculateRange_BTN_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(335, 254);
+            label10.Name = "label10";
+            label10.Size = new Size(44, 15);
+            label10.TabIndex = 16;
+            label10.Text = "label10";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(335, 225);
+            label11.Name = "label11";
+            label11.Size = new Size(44, 15);
+            label11.TabIndex = 15;
+            label11.Text = "label11";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(335, 197);
+            label12.Name = "label12";
+            label12.Size = new Size(44, 15);
+            label12.TabIndex = 14;
+            label12.Text = "label12";
+            // 
+            // StandardDeviation_BTN
+            // 
+            StandardDeviation_BTN.Location = new Point(513, 158);
+            StandardDeviation_BTN.Name = "StandardDeviation_BTN";
+            StandardDeviation_BTN.Size = new Size(123, 23);
+            StandardDeviation_BTN.TabIndex = 17;
+            StandardDeviation_BTN.Text = "Standard Deviation";
+            StandardDeviation_BTN.UseVisualStyleBackColor = true;
+            StandardDeviation_BTN.Click += StandardDeviation_BTN_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(513, 254);
+            label13.Name = "label13";
+            label13.Size = new Size(44, 15);
+            label13.TabIndex = 20;
+            label13.Text = "label13";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(513, 225);
+            label14.Name = "label14";
+            label14.Size = new Size(44, 15);
+            label14.TabIndex = 19;
+            label14.Text = "label14";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(513, 197);
+            label15.Name = "label15";
+            label15.Size = new Size(44, 15);
+            label15.TabIndex = 18;
+            label15.Text = "label15";
+            // 
+            // VarianceCalculator_BTN
+            // 
+            VarianceCalculator_BTN.Location = new Point(666, 158);
+            VarianceCalculator_BTN.Name = "VarianceCalculator_BTN";
+            VarianceCalculator_BTN.Size = new Size(123, 23);
+            VarianceCalculator_BTN.TabIndex = 21;
+            VarianceCalculator_BTN.Text = "Variance Calculator";
+            VarianceCalculator_BTN.UseVisualStyleBackColor = true;
+            VarianceCalculator_BTN.Click += VarianceCalculator_BTN_Click;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(666, 254);
+            label16.Name = "label16";
+            label16.Size = new Size(44, 15);
+            label16.TabIndex = 24;
+            label16.Text = "label16";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(666, 225);
+            label17.Name = "label17";
+            label17.Size = new Size(44, 15);
+            label17.TabIndex = 23;
+            label17.Text = "label17";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(666, 197);
+            label18.Name = "label18";
+            label18.Size = new Size(44, 15);
+            label18.TabIndex = 22;
+            label18.Text = "label18";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1331, 713);
+            ClientSize = new Size(806, 713);
+            Controls.Add(label16);
+            Controls.Add(label17);
+            Controls.Add(label18);
+            Controls.Add(VarianceCalculator_BTN);
+            Controls.Add(label13);
+            Controls.Add(label14);
+            Controls.Add(label15);
+            Controls.Add(StandardDeviation_BTN);
+            Controls.Add(label10);
+            Controls.Add(label11);
+            Controls.Add(label12);
+            Controls.Add(CalculateRange_BTN);
             Controls.Add(label7);
             Controls.Add(label8);
             Controls.Add(label9);
@@ -229,5 +364,17 @@
         private Label label7;
         private Label label8;
         private Label label9;
+        private Button CalculateRange_BTN;
+        private Label label10;
+        private Label label11;
+        private Label label12;
+        private Button StandardDeviation_BTN;
+        private Label label13;
+        private Label label14;
+        private Label label15;
+        private Button VarianceCalculator_BTN;
+        private Label label16;
+        private Label label17;
+        private Label label18;
     }
 }

@@ -20,26 +20,5 @@
 
             return variance;
         }
-
-        public static void DisplayPrelimVariance(List<StudentModel> studentList)
-        {
-            double prelimVariance = CalculateVariance(studentList, student => student.prelim);
-            Console.WriteLine($"Prelim Variance: {prelimVariance:F3}");
-        }
-
-        public static void DisplayMidtermVariance(List<StudentModel> studentList)
-        {
-            double midtermVariance = CalculateVariance(studentList, student => student.midterm);
-            Console.WriteLine($"Midterm Variance: {midtermVariance:F3}");
-        }
-
-        public static void DisplayFinalsVariance(List<StudentModel> studentList)
-        {
-            double finalsVariance = CalculateVariance(studentList, student => student.finals);
-            Console.WriteLine($"Midterm Variance: {finalsVariance:F3}");
-        }
-
-
-
     }
 }
