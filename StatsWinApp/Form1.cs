@@ -14,7 +14,7 @@ namespace StatsWinApp
         {
             Classroom.AddStudentsToList();
             LoadListView();
-
+            LoadListView2();
         }
 
         private void LoadListView()
@@ -27,6 +27,24 @@ namespace StatsWinApp
 
             }
         }
+
+        private void LoadListView2()
+        {
+            foreach (var student in StudentModel.studentsList)
+            {
+                double roundDownPrelim = Math.Floor(student.prelim);
+                double roundDownMidterm = Math.Floor(student.midterm);
+                double roundDownFinals = Math.Floor(student.finals);
+                double roundedUpFinalGrade = GradeCalculator.CalculateFinalPeriod(roundDownPrelim, roundDownMidterm, roundDownFinals);
+
+                string[] rows = { student.studentName, roundDownPrelim.ToString(), roundDownMidterm.ToString(), roundDownFinals.ToString(), roundedUpFinalGrade.ToString() };
+                var listViewItems = new ListViewItem(rows);
+                listView2.Items.Add(listViewItems);
+
+            }
+        }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -142,11 +160,5 @@ namespace StatsWinApp
             label16.Visible = true;
         }
 
-        private void GradeCalculator_BTN_Click(object sender, EventArgs e)
-        {
-            double prelim = GradeCalculator.CalculateFinalPeriod(StudentModel.studentsList, stud => stud.prelim);
-
-
-        }
     }
 }

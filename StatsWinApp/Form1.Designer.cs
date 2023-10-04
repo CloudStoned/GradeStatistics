@@ -57,6 +57,13 @@
             label16 = new Label();
             label17 = new Label();
             label18 = new Label();
+            listView2 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
+            FinalGrade = new ColumnHeader();
+            label19 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -308,11 +315,55 @@
             label18.TabIndex = 22;
             label18.Text = "label18";
             // 
+            // listView2
+            // 
+            listView2.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, FinalGrade });
+            listView2.Location = new Point(204, 383);
+            listView2.Name = "listView2";
+            listView2.Size = new Size(374, 249);
+            listView2.TabIndex = 25;
+            listView2.UseCompatibleStateImageBehavior = false;
+            listView2.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Student Name";
+            columnHeader1.Width = 110;
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Prelim";
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Midterm";
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Finals";
+            // 
+            // FinalGrade
+            // 
+            FinalGrade.Text = "Final Grade";
+            FinalGrade.Width = 80;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label19.Location = new Point(324, 343);
+            label19.Name = "label19";
+            label19.Size = new Size(152, 37);
+            label19.TabIndex = 26;
+            label19.Text = "Final Grade";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(806, 713);
+            Controls.Add(label19);
+            Controls.Add(listView2);
             Controls.Add(label16);
             Controls.Add(label17);
             Controls.Add(label18);
@@ -376,5 +427,12 @@
         private Label label16;
         private Label label17;
         private Label label18;
+        private ListView listView2;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
+        private ColumnHeader FinalGrade;
+        private Label label19;
     }
 }
